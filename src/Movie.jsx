@@ -21,7 +21,7 @@ const Movie = () => {
     useEffect(()=>{
       if(searchdata.trim() !== '')
       {
-        axios.get(`http://www.omdbapi.com/?s=${searchdata}&apikey=7cbef1e2`).then((res)=>{
+        axios.get(`https://www.omdbapi.com/?s=${searchdata}&apikey=7cbef1e2`).then((res)=>{
           console.log("res",res);
           setmoviedata(res.data.Search)
       }).catch((err)=>{
