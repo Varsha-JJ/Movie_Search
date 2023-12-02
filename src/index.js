@@ -6,18 +6,24 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Movie from './Movie';
 import Detailmovie from './Detailmovie';
+import Favorates from './Favorates';
+import { Provider } from 'react-redux';
+import Store from './Store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App/>}/>
-        <Route path="/movie" element={<Movie/>} />
-        <Route path='/view/:id' element={<Detailmovie/>}/>
-      </Routes>
-    </BrowserRouter>
+     <Provider store={Store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App/>}/>
+          <Route path="/movie" element={<Movie/>} />
+          <Route path='/view/:id' element={<Detailmovie/>}/>
+          <Route path='favorates' element={<Favorates/>}/>
+        </Routes>
+      </BrowserRouter>
+     </Provider>
   </React.StrictMode>
 );
 

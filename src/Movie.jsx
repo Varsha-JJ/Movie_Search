@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Result from './Result';
+import { FaStar } from "react-icons/fa";
 
 const Movie = () => {
     const [moviedata,setmoviedata] = useState([])
@@ -37,7 +38,7 @@ const Movie = () => {
   return (
     <div>
       <Card className='d-flex justify-content-center bg-clr'>
-        <Form className="d-flex mt-5 justify-content-center mb-5">
+        <Form className="d-flex mt-5 justify-content-center mb-5 gap-lg-5 ">
               <Form.Control
                 type="search"
                 placeholder="Search movie"
@@ -46,6 +47,7 @@ const Movie = () => {
                 style={{width:'30rem',outline: 'none'}}
                 onChange={change}
               />
+              {/* <Link to='favorates' className='aa'><div className='star'><FaStar/></div></Link> */}
         </Form>
       </Card>
       <Container>
